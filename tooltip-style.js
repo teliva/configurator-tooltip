@@ -5,7 +5,10 @@ color: #fff;
 border-radius: 4px;
 padding: 12px;
 position: absolute;
-display:none;
+display:block;
+position:absolute;
+opacity:0;
+transition: opacity 3s;
 }
 `;
 

@@ -48,9 +48,9 @@ class ConfiguratorTooltip extends HTMLElement {
     }
 
     positionAbsolutely() {
-        this.style.display = 'block';
-        this.style.position = 'absolute';
         const quadrant = this.determineQuadrant();
+        
+        this.style.opacity = 1;
         switch (quadrant) {
             case 1:
                 this.style.top = `${window.event.clientY - this.clientHeight - 70}px`;

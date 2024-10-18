@@ -1,3 +1,3 @@
-const tT = `<span>Your text goes here</span>`;
+const tT = `<span></span>`;
 
 export { tT };

@@ -9,7 +9,7 @@ nodes.forEach(node => {
 const onOver = (e) => {
     let tt = document.querySelector('configurator-tooltip');
     if (!tt) {
-        const tt = createTooltip(e.currentTarget, 'dude this is a tooltip');
+        const tt = createTooltip(e.currentTarget, '<div>Injection<p>Prices</p></div>');
         document.body.appendChild(tt);
         tt.addEventListener("mouseout", (e) => onLeaveTT(e));
     }

@@ -45,12 +45,12 @@ class ConfiguratorTooltip extends HTMLElement {
 
     connectedCallback() {
         this.positionAbsolutely();
+        this.style.opacity = 1;
     };
 
     positionAbsolutely() {
         const quadrant = this.determineQuadrant();
 
-        this.style.opacity = 1;
         switch (quadrant) {
             case 1:
                 this.style.top = `${window.event.clientY + 4}px`;
@@ -82,14 +82,13 @@ const onLeave = (e) => {
     let tt = document.querySelector('configurator-tooltip');
     let located = document.elementFromPoint(e.pageX, e.pageY);
     if (located.nodeName !== 'CONFIGURATOR-TOOLTIP' && tt) {
-        tt.remove();
+        tt.remove();    
     }
 };
 
 const createTooltip = (target, innerHtml) => {
     const retEle = document.createElement('configurator-tooltip');
     retEle.target = target;
-
 
     //markup
     const componentTemplate = document.createElement('template');

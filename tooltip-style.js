@@ -8,7 +8,7 @@ position: absolute;
 display:block;
 position:absolute;
 opacity:0;
-transition: opacity 3s;
+transition: opacity 0.3s ease-in-out;
 }
 `;
 
